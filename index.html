@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anežkas Geburtstagsfeier</title>
+  <style>
+    :root {
+      --bg1: #eef7ff;
+      --bg2: #fdf3ff;
+      --card: rgba(255, 255, 255, 0.88);
+      --text: #2d3a4a;
+      --accent: #7b8cff;
+      --accent-2: #c884ff;
+      --soft: #e7ecff;
+      --shadow: 0 12px 35px rgba(91, 113, 181, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.95), transparent 30%),
+        radial-gradient(circle at top right, rgba(255,255,255,0.65), transparent 22%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      min-height: 100vh;
+    }
+
+    .wrapper {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 28px 18px 48px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 42px 24px 28px;
+    }
+
+    .hero .emoji {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.3rem);
+      line-height: 1.1;
+      color: #5e6be0;
+    }
+
+    .subtitle {
+      margin: 14px auto 0;
+      max-width: 650px;
+      font-size: 1.08rem;
+      line-height: 1.7;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(123, 140, 255, 0.15);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      padding: 26px;
+      margin-top: 22px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .info-box {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 18px;
+      border: 1px solid #edf0ff;
+    }
+
+    .label {
+      display: inline-block;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--accent-2);
+      margin-bottom: 8px;
+    }
+
+    .value {
+      font-size: 1.05rem;
+      line-height: 1.55;
+      font-weight: 600;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 1.5rem;
+      color: #5d57b8;
+    }
+
+    p {
+      line-height: 1.75;
+      margin: 0 0 14px;
+    }
+
+    .wishlist {
+      background: linear-gradient(135deg, rgba(123,140,255,0.08), rgba(200,132,255,0.10));
+      border: 1px solid rgba(123,140,255,0.14);
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 13px 20px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: white;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: 700;
+      box-shadow: 0 8px 22px rgba(123, 140, 255, 0.28);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 28px rgba(123, 140, 255, 0.32);
+    }
+
+    .note {
+      font-size: 0.96rem;
+      color: #586579;
+    }
+
+    .footer {
+      text-align: center;
+      padding-top: 18px;
+      font-size: 0.95rem;
+      color: #6e7890;
+    }
+
+    .sparkles {
+      font-size: 1.1rem;
+      letter-spacing: 0.15em;
+      color: #a67cff;
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 640px) {
+      .wrapper {
+        padding: 18px 14px 34px;
+      }
+
+      .hero {
+        padding: 28px 12px 18px;
+      }
+
+      .card {
+        padding: 20px;
+        border-radius: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <section class="hero">
+      <div class="emoji">🦄❄️✨</div>
+      <div class="sparkles">Elsa & Einhorn Abenteuer</div>
+      <h1>Anežkas 5. Geburtstag</h1>
+      <p class="subtitle">
+        Wie schön, dass ihr unsere Einladung angenommen habt! Hier findet ihr alle wichtigen Informationen
+        zur Geburtstagsfeier auf einen Blick.
+      </p>
+    </section>
+
+    <section class="card">
+      <div class="grid">
+        <div class="info-box">
+          <div class="label">Wann</div>
+          <div class="value">26. April<br />14:00–17:00 Uhr</div>
+        </div>
+        <div class="info-box">
+          <div class="label">Wo</div>
+          <div class="value">Ludwigstrasse 11<br />Aschaffenburg</div>
+        </div>
+        <div class="info-box">
+          <div class="label">Klingeln</div>
+          <div class="value">Bitte bei <strong>Polko</strong> klingeln</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Praktische Infos</h2>
+      <p>
+        Unsere Gegensprechanlage funktioniert leider nicht immer zuverlässig. Falls niemand sofort aufmacht,
+        wartet bitte kurz — wir kommen dann runter und holen euch ab.
+      </p>
+      <p>
+        Ihr könnt euer Kind gern zur Feier bringen und später wieder abholen. Wenn ihr lieber während der Feier
+        dableiben möchtet, ist das natürlich auch völlig in Ordnung.
+      </p>
+      <p class="note">
+        Wenn ihr Fragen habt, meldet euch einfach bei Martina.
+      </p>
+    </section>
+
+    <section class="card wishlist">
+      <h2>Wunschliste</h2>
+      <p>
+        Wenn ihr etwas schenken möchtet, würde sich Anežka sehr über etwas von ihrer Wunschliste freuen.
+      </p>
+      <a class="button" href="https://www.amazon.de/" target="_blank" rel="noopener noreferrer">
+        Zur Amazon-Wunschliste
+      </a>
+      <p class="note" style="margin-top: 14px;">
+        Den Link můžeme později nahradit přímo vaší konkrétní Amazon-Wunschliste.
+      </p>
+    </section>
+
+    <div class="footer">
+      Mit Freude, Glitzer und ganz viel Geburtstagsspaß 💜
+    </div>
+  </div>
+</body>
+</html>
